@@ -1,0 +1,18 @@
+@use 'theme';
+
+.gitHubStatsContainer, .gitHubStats, .social{
+    display: flex;
+}
+
+.gitHubStats {
+    font-family: theme.$font-family;
+    flex-direction: column;
+}
+
+.socialContainer {
+    list-style: none;
+}
+
+.social {
+    align-items: center;
+}
