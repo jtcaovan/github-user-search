@@ -1,0 +1,32 @@
+@use 'theme';
+
+.searchContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: theme.$content-background-color;
+    border-radius: 10%;
+    padding: 12px;
+}
+
+.inputText {
+    font-family: theme.$font-family;
+    height: 100%;
+    border: none;
+}
+
+.searchButton {
+    background-color: theme.$button-color;
+    color: #FFFFFF;
+    font-family: theme.$font-family;
+    border: none;
+    border-radius: 15%;
+    padding: 12px;
+}
+
+.errorMessage{
+    visibility: hidden;
+    margin: 0;
+    height: 100%;
+    font-family: theme.$font-family;
+    background-color: #FFFFFF;
+}

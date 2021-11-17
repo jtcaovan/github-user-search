@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 
-const UserProfile = () => 
+
+const UserProfile = () => <div>Profile Information</div>
+
+
 // User
 // User Information
 // Social Media
-    <div>
-        
-    </div>
 
 export default UserProfile
