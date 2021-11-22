@@ -30,7 +30,7 @@ function App() {
       const octokit = new Octokit({ auth: `${API_KEY}` })
 
       try {
-        const user = await octokit.request('GET /users/jtcaovan', {
+        const user = await octokit.request('GET /users/octocat', {
           username: 'username'
         })
 

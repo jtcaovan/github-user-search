@@ -13,15 +13,15 @@ const UserProfile = (props : any) => {
         <section className='userProfileContainer'>
             <header className='profileHeader'>
                 <img src={props.userInfo.profileImage} className='profilePicture' alt='User Profile'></img>
-                <div>
-                    <h2>{props.userInfo.name}</h2>
+                <div className='headerContent'>
+                    <h2 className='userName'>{props.userInfo.name}</h2>
                     <h3 className='login'>@{props.userInfo.login}</h3>
-                    <h4>{props.userInfo.dateJoined}</h4>
+                    <h4 className='dateJoined'>{props.userInfo.dateJoined}</h4>
                 </div>
             </header>
 
             <div>
-                <p className='bio'>{props.userInfo.bio}</p>
+                <p className='bio'>{props.userInfo.bio ? props.userInfo.bio : 'This profile has no bio'}</p>
                 <div className='gitHubStatsContainer'>
                     <div className='gitHubStats'>
                         <p>Repos</p>

@@ -1,11 +1,8 @@
 @use 'theme';
 
 
-header {
+header h1 {
     display: flex;
-}
-
-h1 {
     color: theme.$header-color;
     font-family: theme.$font-family;
     font-weight: theme.$font-weight-bold;
