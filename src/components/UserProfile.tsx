@@ -22,18 +22,20 @@ const UserProfile = (props : any) => {
 
             <div>
                 <p className='bio'>{props.userInfo.bio ? props.userInfo.bio : 'This profile has no bio'}</p>
-                <div className='gitHubStatsContainer'>
-                    <div className='gitHubStats'>
-                        <p>Repos</p>
-                        <p>{props.userInfo.repos}</p>
-                    </div>
-                    <div className='gitHubStats'>
-                        <p>Followers</p>
-                        <p>{props.userInfo.followers}</p>
-                    </div>
-                    <div className='gitHubStats'>
-                        <p>Following</p>
-                        <p>{props.userInfo.following}</p>
+                <div className='gitHubOuterContainer'>
+                    <div className='gitHubInnerContainer'>
+                        <div className='gitHubStats'>
+                            <p className='gitHubTitle'>Repos</p>
+                            <p className='gitHubStat'>{props.userInfo.repos}</p>
+                        </div>
+                        <div className='gitHubStats'>
+                            <p className='gitHubTitle'>Followers</p>
+                            <p className='gitHubStat'>{props.userInfo.followers}</p>
+                        </div>
+                        <div className='gitHubStats'>
+                            <p className='gitHubTitle'>Following</p>
+                            <p className='gitHubStat'>{props.userInfo.following}</p>
+                        </div>
                     </div>
                 </div>
 

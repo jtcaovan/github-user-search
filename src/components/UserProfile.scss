@@ -1,23 +1,30 @@
 @use 'theme';
 
 .userProfileContainer {
+    color: theme.$body-color;
     background: theme.$content-background-color;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+
     font-family: theme.$font-family;
     font-style: theme.$font-style;
     font-weight: theme.$font-weight;
-    border-radius: 0.63rem;
+    line-height: theme.$line-height-large;
+
+    border-radius: theme.$border-radius;
     width: 20.44rem;
     height: 32.31rem;
-    line-height: theme.$line-height-large;
+    margin-top: 1rem;
 }
+
+
+// Header and Bio
 
 .profileHeader {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 4.38rem;
     width: 14.56rem;
-    border-radius: 0.63rem;
+    padding: 2rem 1.50rem;
 }
 
 .profilePicture {
@@ -29,16 +36,7 @@
 .headerContent {
     display: flex;
     flex-direction: column;
-    padding: none;
-    margin: 0;
-}
-
-
-.bio {
-    font-size: theme.$font-size-small;
-    color: theme.$body-color;
-    width: 17.44rem;
-    height: 4.69rem;
+    margin-left: 1.2rem;
 }
 
 .userName, .login, .dateJoined {
@@ -49,41 +47,84 @@
 }
 
 .userName {
-    color: #2B3442;
+    color: theme.$bold-color;
     font-weight: theme.$font-weight-bold;
     font-size: theme.$font-size;
     line-height: 1.5rem;
 }
 
 .login {
-    color: #0079FF;
+    color: theme.$blue;
     line-height: theme.$line-height-small;
 }
 
 .dateJoined {
-    color: #697C9A;
+    color: theme.$date-color;
     line-height: theme.$line-height-small;
 }
 
-.gitHubStatsContainer, .gitHubStats, .social{
+.bio {
+    font-size: theme.$font-size-small;
+    color: theme.$body-color;
+    width: 17.44rem;
+    height: 4.69rem;
+    padding: 0rem 1.50rem;
+}
+
+
+
+
+// Github Stats
+
+.gitHubInnerContainer, .gitHubStats, .social{
     display: flex;
 }
 
-.gitHubStatsContainer {
+.gitHubOuterContainer {
     background: theme.$main-background-color;
+    border-radius: theme.$border-radius;
     height: 5.31rem;
     width: 17.44rem;
-    padding: 15px 14px;
+    margin: auto;
 }
 
+.gitHubInnerContainer {
+    justify-content: space-between;
+    height: 3rem;
+    width: 15.63rem;
+    margin: 1.13rem 0.88rem 1.19rem 0.94rem;
+}
+
+.gitHubTitle {
+    font-size: theme.$font-size-smallest;
+}
 .gitHubStats {
     flex-direction: column;
+    align-items: center;
+}
+
+.gitHubStat {
+    color: theme.$bold-color;
+    font-weight: theme.$font-weight-bold;
+    margin: auto;
 }
 
 .socialContainer {
+    color: theme.$body-color;
     list-style: none;
+    padding: 0rem 1.50rem;
+    width: 11.56rem;
+    height: 7.94rem;
 }
 
 .social {
+    display: flex;
+    justify-content: left;
+    font-size: theme.$font-size-small;
     align-items: center;
+}
+
+.social > p {
+    margin: 0rem;
+    padding: 0.5rem 0rem 0.5rem 0.5rem;
 }
