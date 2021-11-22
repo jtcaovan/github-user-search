@@ -10,18 +10,18 @@ import './UserProfile.scss'
 const UserProfile = (props : any) => {
     console.log(props)
     return (
-        <section>
-            <header>
-                <img src={props.userInfo.profileImage} alt='User Profile'></img>
+        <section className='userProfileContainer'>
+            <header className='profileHeader'>
+                <img src={props.userInfo.profileImage} className='profilePicture' alt='User Profile'></img>
                 <div>
                     <h2>{props.userInfo.name}</h2>
-                    <h3>@{props.userInfo.login}</h3>
-                    <h4>{props.userInfo.joined}</h4>
+                    <h3 className='login'>@{props.userInfo.login}</h3>
+                    <h4>{props.userInfo.dateJoined}</h4>
                 </div>
             </header>
 
             <div>
-                <p>{props.userInfo.bio}</p>
+                <p className='bio'>{props.userInfo.bio}</p>
                 <div className='gitHubStatsContainer'>
                     <div className='gitHubStats'>
                         <p>Repos</p>
@@ -40,19 +40,19 @@ const UserProfile = (props : any) => {
                 <ul className='socialContainer'>
                     <li className='social'>
                         <Location />
-                        <p>{props.userInfo.location}</p>                    
+                        <p>{props.userInfo.location ? props.userInfo.location : 'Not available'}</p>                    
                     </li>
                     <li className='social'>
                         <Website />
-                        <p>{props.userInfo.site}</p>
+                        <p>{props.userInfo.site ? props.userInfo.site : 'Not available'}</p>
                     </li>
                     <li className='social'>
                         <Twitter />
-                        <p>{props.userInfo.twitter}</p>
+                        <p>{props.userInfo.twitter ? props.userInfo.twitter : 'Not available'}</p>
                     </li>
                     <li className='social'>
                         <Company />
-                        <p>{props.userInfo.company}</p>
+                        <p>{props.userInfo.company ? props.userInfo.company : 'Not available'}</p>
                     </li>
                 </ul>
             </div>
