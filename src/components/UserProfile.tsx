@@ -7,62 +7,57 @@ import {ReactComponent as Company} from '../assets/icon-company.svg'
 import './UserProfile.scss'
 
 
-const UserProfile = () => 
-    <section>
+const UserProfile = (props : any) => {
+    console.log(props)
+    return (
+        <section>
+            <header>
+                <img src={props.userInfo.profileImage} alt='User Profile'></img>
+                <div>
+                    <h2>{props.userInfo.name}</h2>
+                    <h3>@{props.userInfo.login}</h3>
+                    <h4>{props.userInfo.joined}</h4>
+                </div>
+            </header>
 
-        <header>
-            <p>Profile Picture</p>
             <div>
-                <h2>Profile Name</h2>
-                <h3>GitHub tag</h3>
-                <h4>Join date</h4>
+                <p>{props.userInfo.bio}</p>
+                <div className='gitHubStatsContainer'>
+                    <div className='gitHubStats'>
+                        <p>Repos</p>
+                        <p>{props.userInfo.repos}</p>
+                    </div>
+                    <div className='gitHubStats'>
+                        <p>Followers</p>
+                        <p>{props.userInfo.followers}</p>
+                    </div>
+                    <div className='gitHubStats'>
+                        <p>Following</p>
+                        <p>{props.userInfo.following}</p>
+                    </div>
+                </div>
+
+                <ul className='socialContainer'>
+                    <li className='social'>
+                        <Location />
+                        <p>{props.userInfo.location}</p>                    
+                    </li>
+                    <li className='social'>
+                        <Website />
+                        <p>{props.userInfo.site}</p>
+                    </li>
+                    <li className='social'>
+                        <Twitter />
+                        <p>{props.userInfo.twitter}</p>
+                    </li>
+                    <li className='social'>
+                        <Company />
+                        <p>{props.userInfo.company}</p>
+                    </li>
+                </ul>
             </div>
-        </header>
-
-        <div>
-            <p>Bio</p>
-
-            <div className='gitHubStatsContainer'>
-                <div className='gitHubStats'>
-                    <p>Repos</p>
-                    <p>8</p>
-                </div>
-                <div className='gitHubStats'>
-                    <p>Followers</p>
-                    <p>3000</p>
-                </div>
-                <div className='gitHubStats'>
-                    <p>Following</p>
-                    <p>8</p>
-                </div>
-            </div>
-
-            <ul className='socialContainer'>
-                <li className='social'>
-                    <Location />
-                    <p>Phoenix</p>                    
-                </li>
-                <li className='social'>
-                    <Website />
-                    <p></p>
-                </li>
-                <li className='social'>
-                    <Twitter />
-                    <p></p>
-                </li>
-                <li className='social'>
-                    <Company />
-                    <p></p>
-                </li>
-            </ul>
-        </div>
-
-    </section>
-
-
-
-// User
-// User Information
-// Social Media
+        </section>
+)
+}
 
 export default UserProfile
