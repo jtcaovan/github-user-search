@@ -8,7 +8,13 @@ import './UserProfile.scss'
 
 
 const UserProfile = (props : any) => {
-    console.log(props)
+    let date = new Date(props.userInfo.dateJoined);
+    console.log(date.toLocaleDateString())
+    const day = date.getUTCDate();
+    // const month = new Intl.DateTimeFormat('en-US', {month: 'long'}).format(date);
+    const year = date.getUTCFullYear();
+
+
     return (
         <section className='userProfileContainer'>
             <header className='profileHeader'>
@@ -16,7 +22,9 @@ const UserProfile = (props : any) => {
                 <div className='headerContent'>
                     <h2 className='userName'>{props.userInfo.name}</h2>
                     <h3 className='login'>@{props.userInfo.login}</h3>
-                    <h4 className='dateJoined'>{props.userInfo.dateJoined}</h4>
+                    <h4 className='dateJoined'>
+                        Joined {day} {year}
+                    </h4>
                 </div>
             </header>
 
