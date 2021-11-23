@@ -1,3 +1,3 @@
 # Github DevFinder
 
-Built with React/Redux, styled with SASS
+Built with React, styled with SASS
