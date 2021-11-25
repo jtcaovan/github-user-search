@@ -9,7 +9,7 @@ import './UserProfile.scss'
 
 const UserProfile = (props : any) => {
     let date = new Date(props.userInfo.dateJoined);
-    console.log(date.toLocaleDateString())
+    // console.log(date.toLocaleDateString())
     const day = date.getUTCDate();
     // const month = new Intl.DateTimeFormat('en-US', {month: 'short'}).format(date);
     const year = date.getUTCFullYear();

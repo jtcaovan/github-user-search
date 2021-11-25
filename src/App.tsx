@@ -9,7 +9,7 @@ import { Octokit } from '@octokit/core';
 function App() {
   const API_KEY = process.env.REACT_APP_GITHUB_AUTH;
   
-  // const [currentUser, setCurrentUser] = useState('jtcaovan')
+  const [currentUser, setCurrentUser] = useState('octocat')
   const [userInfo, setUserInfo] = useState({
     profileImage: '',
     name: '',
@@ -28,12 +28,12 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const octokit = new Octokit({ auth: `${API_KEY}` })
+      console.log(currentUser)
 
       try {
-        const user = await octokit.request('GET /users/jtcaovan', {
+        const user = await octokit.request(`GET /users/${currentUser}`, {
           username: 'username'
         })
-
         setUserInfo({
           profileImage: user.data.avatar_url,
           name: user.data.name,
@@ -54,12 +54,12 @@ function App() {
     };
 
     fetchData();
-  }, []);
+  }, [currentUser]);
   
   return (
     <div className='mainContainer'>
       <Header />
-      <SearchBar />
+      <SearchBar setCurrentUser={setCurrentUser}/>
       <UserProfile userInfo={userInfo}/>
     </div>
   );
