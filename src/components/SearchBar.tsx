@@ -5,11 +5,11 @@ import './SearchBar.scss'
 const SearchBar = (props: any) => {
     const [user, setUser] = useState('')
 
-    function handleChange(e: any) {
+    const handleChange = (e: any) => {
         setUser(e.target.value)
     }
 
-    function handleClick(e: any) {
+    const handleClick = (e: any) => {
         e.preventDefault()
         props.setCurrentUser(user)
         setUser('')

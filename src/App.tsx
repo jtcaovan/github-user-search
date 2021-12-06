@@ -28,7 +28,6 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const octokit = new Octokit({ auth: `${API_KEY}` })
-      console.log(currentUser)
 
       try {
         const user = await octokit.request(`GET /users/${currentUser}`, {
@@ -54,12 +53,12 @@ function App() {
     };
 
     fetchData();
-  }, [currentUser]);
+  }, [currentUser, API_KEY]);
   
   return (
     <div className='mainContainer'>
       <Header />
-      <SearchBar setCurrentUser={setCurrentUser}/>
+      <SearchBar setCurrentUser={setCurrentUser} />
       <UserProfile userInfo={userInfo}/>
     </div>
   );
