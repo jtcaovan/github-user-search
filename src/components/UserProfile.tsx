@@ -17,7 +17,7 @@ const UserProfile = (props : any) => {
 
     return (
         <section className='userProfileContainer'>
-            <header className='profileHeader'>
+            <div className='profileHeader'>
                 <img src={props.userInfo.profileImage} className='profilePicture' alt='User Profile'></img>
                 <div className='headerContent'>
                     <h2 className='userName'>{props.userInfo.name}</h2>
@@ -26,7 +26,7 @@ const UserProfile = (props : any) => {
                         Joined {day} {year}
                     </h4>
                 </div>
-            </header>
+            </div>
 
             <div>
                 <p className='bio'>{props.userInfo.bio ? props.userInfo.bio : 'This profile has no bio'}</p>

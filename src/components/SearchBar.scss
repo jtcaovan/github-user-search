@@ -6,7 +6,7 @@
     align-items: center;
     background-color: theme.$content-background-color;
     border-radius: 0.94rem;
-    width: 20.44rem;
+    width: theme.$mobile-width;
     height: 3.75rem;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
@@ -41,4 +41,16 @@
     height: 100%;
     font-family: theme.$font-family;
     background-color: #FFFFFF;
+}
+
+@media only screen and (min-width: 768px) {
+    .searchContainer {
+        width: theme.$tablet-width;
+    }
+}
+
+@media only screen and (min-width: 996px) {
+    .searchContainer {
+        width: theme.$browser-width;
+    }
 }

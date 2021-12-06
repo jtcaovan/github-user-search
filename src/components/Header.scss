@@ -1,9 +1,36 @@
 @use 'theme';
 
-
-header h1 {
+header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: theme.$mobile-width;
     color: theme.$header-color;
     font-family: theme.$font-family;
     font-weight: theme.$font-weight-bold;
+}
+
+.toggleContent {
+    display: flex;
+    align-items: center;
+    font-weight: theme.$font-weight;
+    font-size: theme.$font-size-small;
+    color: theme.$body-color;
+}
+
+.toggleName {
+    margin-right: 1em;
+    letter-spacing: 0.16rem;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        width: theme.$tablet-width;
+    }
+}
+
+@media only screen and (min-width: 996px) {
+    header {
+        width: theme.$browser-width;
+    }
 }
