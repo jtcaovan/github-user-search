@@ -17,14 +17,16 @@ const SearchBar = (props: any) => {
     return (
         <div className='searchContainer'>
             <form>
-                <SearchIcon />
-                <input 
-                    className='inputText' 
-                    placeholder='Search GitHub username...'
-                    onChange={handleChange}
-                    value={user}
-                    type='text'>
-                </input>
+                <div className='search'>
+                    <SearchIcon />
+                    <input 
+                        className='inputText' 
+                        placeholder='Search GitHub username...'
+                        onChange={handleChange}
+                        value={user}
+                        type='text'>
+                    </input>
+                </div>
                 {/* <p className='errorMessage'>No results</p> */}
                 <button onClick={handleClick} className='searchButton'>Search</button>
             </form>
