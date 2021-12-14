@@ -75,19 +75,19 @@
 }
 
 
-
-
 // Github Stats
 
 .gitHubInnerContainer, .gitHubStats, .social{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gitHubOuterContainer {
     background: theme.$main-background-color;
     border-radius: theme.$border-radius;
     height: 5.31rem;
-    width: 17.44rem;
+    width: 85%;
     margin: auto;
 }
 
@@ -115,6 +115,8 @@
 .socialContainer {
     color: theme.$body-color;
     list-style: none;
+    display: flex;
+    flex-direction: column;
     padding: 0em 1.50em;
     width: 11.56rem;
     height: 7.94rem;
@@ -135,6 +137,12 @@
 @media only screen and (min-width: 768px) {
     .userProfileContainer {
         width: theme.$tablet-width;
+    }
+    .socialContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        width: 28.61rem;
     }
 }
 
